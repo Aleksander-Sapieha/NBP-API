@@ -13,7 +13,7 @@ Features
 
     Simple JSON interface using nlohmann::json
 
-Requirements
+### Requirements
 
     C++17 compatible compiler
 
@@ -21,7 +21,7 @@ Requirements
 
     nlohmann/json — JSON for Modern C++
 
-Installation
+### Installation
 
     Install dependencies (cpr and nlohmann/json) using your package manager or build from source.
 
@@ -29,11 +29,11 @@ Installation
 
     Compile your code including api.cpp and main.cpp linking with cpr.
 
-Example with g++:
+### Example with g++:
 
 g++ main.cpp api.cpp -lcpr -o nbp_app -std=c++17
 
-Usage
+### Usage
 
 #include "api.h"
 #include <iostream>
@@ -53,7 +53,7 @@ int main() {
     return 0;
 }
 
-API Functions
+### API Functions
 
     json getCurrentGoldPrice()
 
@@ -65,6 +65,6 @@ API Functions
 
     json getCurrencyInterval(const std::string& table, const std::string& code, const std::string& from, const std::string& to)
 
-License
+### License
 
 MIT License
