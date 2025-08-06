@@ -29,10 +29,6 @@ Features
 
     Compile your code including api.cpp and main.cpp linking with cpr.
 
-### Example with g++:
-
-g++ main.cpp api.cpp -lcpr -o nbp_app -std=c++17
-
 ### Usage
 
     #include "api.h"
