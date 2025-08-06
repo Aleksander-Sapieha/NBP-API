@@ -35,6 +35,7 @@ g++ main.cpp api.cpp -lcpr -o nbp_app -std=c++17
 
 ### Usage
 
+`
 #include "api.h"
 #include <iostream>
 
@@ -52,7 +53,7 @@ int main() {
 
     return 0;
 }
-
+`
 ### API Functions
 
     json getCurrentGoldPrice()
