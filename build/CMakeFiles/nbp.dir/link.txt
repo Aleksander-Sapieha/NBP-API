@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/nbp.dir/main.cpp.o CMakeFiles/nbp.dir/api.cpp.o -o nbp  -Wl,-rpath,"/home/sourceguy/Desktop/NBP API/build/external/cpr/cpr:/home/sourceguy/Desktop/NBP API/build/_deps/curl-build/lib" external/cpr/cpr/libcpr.so.1.12.0 _deps/curl-build/lib/libcurl.so.4.8.0 
