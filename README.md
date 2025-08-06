@@ -35,25 +35,23 @@ g++ main.cpp api.cpp -lcpr -o nbp_app -std=c++17
 
 ### Usage
 
-`
-#include "api.h"
-#include <iostream>
-
-int main() {
-    auto goldPriceJson = nbp::getCurrentGoldPrice();
-
-    if (!goldPriceJson.empty() && goldPriceJson.is_array()) {
-        std::cout << "Current gold price: " << goldPriceJson[0]["cena"].get<double>() << " PLN\n";
-    } else {
-        std::cerr << "Failed to fetch gold price.\n";
+    #include "api.h"
+    #include <iostream>
+    
+    int main() {
+        auto goldPriceJson = nbp::getCurrentGoldPrice();
+    
+        if (!goldPriceJson.empty() && goldPriceJson.is_array()) {
+            std::cout << "Current gold price: " << goldPriceJson[0]["cena"].get<double>() << " PLN\n";
+        } else {
+            std::cerr << "Failed to fetch gold price.\n";
+        }
+    
+        auto rates = nbp::getTodaysExchangeRates("A");
+        std::cout << rates.dump(2) << std::endl;
+    
+        return 0;
     }
-
-    auto rates = nbp::getTodaysExchangeRates("A");
-    std::cout << rates.dump(2) << std::endl;
-
-    return 0;
-}
-`
 ### API Functions
 
     json getCurrentGoldPrice()
