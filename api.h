@@ -1,5 +1,4 @@
-#ifndef _API
-#define _API
+#pragma once
 #include <iostream>
 #include <nlohmann/json.hpp>
 #include <string>
@@ -37,5 +36,3 @@ namespace nbp{
         
     json getLastNCurrency(const std::string& table, const std::string& code, int n);
 } // namespace nbp
-
-#endif // _API
