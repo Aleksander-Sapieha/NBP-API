@@ -3,6 +3,10 @@
 A simple C++ wrapper for the NBP API to fetch gold prices and currency exchange rates using cpr for HTTP requests and nlohmann/json for JSON parsing.
 Features
 
+### Why Use
+
+This API Allows you to fetch prices of gold and currencies in PLN (USD Coming Soon)
+
     Get current gold price
 
     Get gold price for a specific date or date range
@@ -27,7 +31,7 @@ Features
 
     Clone this repository.
 
-    Compile your code including api.cpp and main.cpp linking with cpr.
+    Compile your code including api.cpp linking with cpr.
 
 ### Usage
 
