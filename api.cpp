@@ -2,6 +2,13 @@
 #include <nlohmann/json.hpp>
 #include <iostream>
 #include <string>
+#include "api.h"
+
+// Define the json type for convenience
+// This assumes you have nlohmann::json available in your project
+#ifndef NLOHMANN_JSON_FWD_HPP
+#error "Please include nlohmann/json.hpp before this file."
+#endif
 
 using json = nlohmann::json;
 
