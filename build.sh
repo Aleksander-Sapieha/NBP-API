@@ -2,6 +2,6 @@ if [ ! -d "/build" ]; then
     mkdir build
 fi
 cd build
-cmake ..
-make
-cd ..
+cmake -B build -S ..
+make -C build
+

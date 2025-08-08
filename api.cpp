@@ -4,12 +4,6 @@
 #include <string>
 #include "api.h"
 
-// Define the json type for convenience
-// This assumes you have nlohmann::json available in your project
-#ifndef NLOHMANN_JSON_FWD_HPP
-#error "Please include nlohmann/json.hpp before this file."
-#endif
-
 using json = nlohmann::json;
 
 namespace nbp {
@@ -48,13 +42,13 @@ namespace nbp {
 
     // -- Exchange rate table endpoints --
 
-    json getCurrentTable(const std::string& table = "A") {
+    json getCurrentTable(const std::string& table) {
         auto r = cpr::Get(cpr::Url{"https://api.nbp.pl/api/exchangerates/tables/" + table + "/"});
         if (r.status_code == 200) return json::parse(r.text);
         std::cerr << "Error current table: " << r.status_code << "\n"; return {};
     }
 
-    json getTodayTable(const std::string& table = "A") {
+    json getTodayTable(const std::string& table) {
         auto r = cpr::Get(cpr::Url{"https://api.nbp.pl/api/exchangerates/tables/" + table + "/today"});
         if (r.status_code == 200) return json::parse(r.text);
         std::cerr << "Today table not available\n"; return {};
